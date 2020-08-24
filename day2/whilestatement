@@ -1,0 +1,13 @@
+# while语法
+while 条件:
+    语句块
+
+# while计算0-100的和
+
+# while计算0-100的偶数和
+
+# break和continue
+使用continue，在之前一定要修改计数器，否则会陷入死循环
+
+#while循环嵌套
+

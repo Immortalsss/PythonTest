@@ -12,3 +12,4 @@ elif ((player == 0) and (computer == 0)) or ((player == 1) and (computer == 1)) 
     print('平局')
 else:
     print('电脑获胜')
+    
