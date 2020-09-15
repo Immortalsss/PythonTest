@@ -1,0 +1,13 @@
+1.len()
+
+2.del /  del()
+
+3.max和min
+
+4.range(start,end,step)
+不写start，默认为0
+不写step，默认为1
+
+5.enumerate(数据序列名，start)
+默认start=0，输出一些元组，元组第一个数据为序号，第二个数据为数据
+

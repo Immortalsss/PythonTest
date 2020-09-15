@@ -1,0 +1,28 @@
+一、列表推导式：生成有规律的列表
+1.输出0-9的列表
+list = [i for i in range(10)]
+
+2.输出0-10的偶数的列表
+list = [i for i in range(10) if i % 2 == 0]
+
+3.多个for循环
+list = [(i,j) for i in range(1,3) for j in range(0,3)]
+
+
+二、字典推导式：快速合并字典或者提取字典中的目标数据
+1.创建字典，key是1-5的数字，value是key的平方
+dict = {i:i**2 for i in range(1,6)}
+
+2. 将两个列表合并成一个字典
+dict = {list1[i]:list2[i] for i in range(len(list1))}
+
+3.提取字典中的目标数据
+count = {'MBP':256,'Lenovo':199,'HP':122,'ASUS':230,'acer':143}
+提取字典中电脑数量大于200的数据
+
+dict = {key:value for k,v in count.items() if v >= 200}
+
+三、集合推导式(有去重功能)
+创建集合，集合元素是下面列表元素的平方
+list = [1,1,2]
+set = {i ** 2 for i in list}
