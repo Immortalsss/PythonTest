@@ -1,0 +1,39 @@
+*** 字典的数据是以键值对的形式存储的，字典数据和数据顺序没有关系 ***
+
+常见操作
+1.增加：dict[key] = value
+
+2.删除：del():删除整个字典----del(dict)
+        del:删除字典数据----del dict[key]
+
+3.修改：dict[key] = value
+
+4.查找
+4.1 通过key值查找----dict[key]
+
+4.2 dict.get(key,默认值)
+key存在返回对应的数据，key不存在，返回默认值（不说明默认值，默认为None）
+
+4.3 dict.keys()
+
+4.4 dict.values()
+
+4.5 dict.items():每个键值对返回一个元组
+
+
+5.字典的循环遍历
+5.1 key值的循环遍历
+for key in dict.keys():
+    print(key)
+
+5.2 value值的循环遍历
+for value in dict.values():
+    print(value)
+
+5.3 字典元素的遍历
+for item in dict.items():
+    print(item)
+
+5.4 字典元素的遍历(拆分键值对)
+for key,value in dict.items():
+    print("{} = {}".format(key,value))
