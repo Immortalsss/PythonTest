@@ -1,0 +1,75 @@
+一、递归
+1.1 递归内部一定要有出口
+1.2 递归自己调用自己
+
+
+二、lambda表达式
+lambda 参数列表：返回值表达式
+可以把lambda表达式赋值给一个变量，直接打印变量是打印一个地址
+2.1 lambda表达式的参数可有可无，函数的参数在lambda表达式中完全适用
+2.2 lambda表达式能接收任意数量的参数，但只能返回一个表达式的值
+
+2.3 lambda表达式参数形式
+2.3.1 无参数
+fn1 = lambda:100
+print(fn1())
+
+2.3.2 一个参数
+fn2 = lambda a : a
+print(fn2('hello world'))
+
+2.3.3 默认参数（缺省参数）
+fn3 = lambda a, b, c=100 : a + b + c
+print(fn3(10, 20))
+
+2.3.4 可变参数：args
+fn4 = lambda *args: args
+print(fn4(10, 20))----返回一个元组
+
+2.3.5 可变参数：kwargs
+fn5 = lambda **kwargs: kwargs
+print(fn5(name = 'Python', age = 10))----返回一个字典
+
+
+三、高阶函数
+把函数作为参数传入，这样的函数叫做高阶函数
+
+内置高阶函数
+3.1 map()
+map(func,lst):将func应用到列表lst中的每一个元素，结果返回新的列表（Python2）/迭代器（Python3）
+
+list1 = [1,2,3,4]
+
+def func(x):
+    return x ** 2
+
+result = map(func,list1)
+
+print(result)-----返回一个地址
+print(list(result))
+
+3.2 reduce()
+reduce(func,lst):func必须有两个参数，每次func计算的结果继续和序列的下一个元素做累积计算
+
+list1 = [1,2,3,4,5]
+
+import functools
+
+def func(a,b):
+    return a+b
+
+result = functools.reduce(func,list1)
+print(result)
+
+3.3 filter()
+filter(func,lst):用于过滤序列，过滤掉不符合要求的元素，返回一个filter对象（可使用list转换成列表）
+
+list1 = [1,2,3,4,5,6,7,8,9,10]
+
+def func(x):
+    return x % 2 == 0
+
+result = filter(func,list1)
+
+print(result)
+print(list(result))
