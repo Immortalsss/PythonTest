@@ -1,0 +1,53 @@
+一、异常的写法
+try:
+    xxxx
+except:
+    xxxx
+
+
+二、捕获异常
+2.1 捕获指定异常类型
+try:
+    可能出问题的代码
+except 异常类型:
+    如果捕获到该异常类型执行的代码
+
+2.2 捕获多个异常类型
+try:
+    可能出问题的代码
+except （异常类型1，异常类型2，......）:
+    如果捕获到该异常类型执行的代码
+
+2.3 捕获异常描述信息
+try:
+    可能出问题的代码
+except （异常类型1，异常类型2，......）as result:
+    print(result)
+
+2.4 捕获所有异常
+try:
+    可能出问题的代码
+except Exception as result:
+    print(result)
+
+
+三、异常中的else
+try:
+    可能出问题的代码
+except Exception as result:
+    print(result)
+else:
+    xxxxxxxx
+
+
+四、异常中的finally
+finally是无关异常都必须执行的代码，例如关闭文件
+
+
+五、异常的传递
+
+
+六、自定义异常
+raise 异常类对象
+
+
